@@ -4,8 +4,8 @@ pub const MAGIC: u32 = 0xe85250d6;
 
 #[repr(u32)]
 pub enum HeaderArch {
-      I386 = 0, 
-	  Mips = 4
+	I386 = 0, 
+	Mips = 4
 }
 
 #[repr(C)]
@@ -26,8 +26,7 @@ pub struct Info {
 
 #[repr(C)]
 #[derive(Debug)]
-pub struct Tag 
-{
+pub struct Tag {
 	pub ty: TagType, 
 	length: u32
 }
@@ -35,8 +34,8 @@ pub struct Tag
 #[repr(u32)]
 #[derive(Debug, Eq, PartialEq)]
 pub enum TagType {
-    End              = 0,
-    CommandLine      = 1, 
+    	End              = 0,
+    	CommandLine      = 1, 
 	BootloaderName   = 2, 
 	Modules          = 3, 
 	BasicMemInfo     = 4, 
@@ -56,8 +55,8 @@ pub static HEADER: Header = Header {
 	header_length: HEADER_LEN, 
 	checksum: -((MAGIC + 0 + HEADER_LEN) as i32) as u32, 
 	end_tag: Tag { 	
-		ty: TagType::End, 
-		length: END_TAG_LEN
+	ty: TagType::End, 
+	length: END_TAG_LEN
     }
 };
 
