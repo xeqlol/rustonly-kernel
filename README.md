@@ -9,6 +9,7 @@ After i saw this [masterpiece written](https://github.com/hawkw/sos-kernel) writ
 - `grub`: creates the bootable iso
 - `xorriso`: req'd by grub, filesystem manipulator
 - `QEMU`: fake-computer emulator
+- `rustc`: nightly version is necessary
 
 ### QEMU output
 ![alt tag](https://github.com/xeqlol/rustonly-kernel/blob/master/qemu.png)
